@@ -4,9 +4,25 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
 <lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
   <lib desc="#TTL" name="2"/>
-  <lib desc="#Plexers" name="3"/>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
   <lib desc="#Arithmetic" name="4"/>
-  <lib desc="#Memory" name="5"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="6"/>
   <lib desc="#Base" name="7">
     <tool name="Text Tool">
@@ -57,10 +73,129 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
+    <wire from="(60,100)" to="(260,100)"/>
+    <wire from="(60,60)" to="(60,100)"/>
+    <wire from="(280,60)" to="(330,60)"/>
+    <wire from="(280,70)" to="(330,70)"/>
+    <wire from="(280,80)" to="(330,80)"/>
+    <wire from="(280,90)" to="(330,90)"/>
+    <wire from="(60,170)" to="(260,170)"/>
+    <wire from="(60,100)" to="(60,170)"/>
+    <wire from="(60,240)" to="(260,240)"/>
+    <wire from="(280,200)" to="(330,200)"/>
+    <wire from="(280,210)" to="(330,210)"/>
+    <wire from="(280,220)" to="(330,220)"/>
+    <wire from="(280,230)" to="(330,230)"/>
+    <wire from="(60,170)" to="(60,240)"/>
+    <wire from="(60,310)" to="(260,310)"/>
+    <wire from="(280,270)" to="(330,270)"/>
+    <wire from="(280,280)" to="(330,280)"/>
+    <wire from="(280,290)" to="(330,290)"/>
+    <wire from="(280,300)" to="(330,300)"/>
+    <wire from="(60,240)" to="(60,310)"/>
+    <wire from="(60,380)" to="(260,380)"/>
+    <wire from="(280,340)" to="(330,340)"/>
+    <wire from="(280,350)" to="(330,350)"/>
+    <wire from="(280,360)" to="(330,360)"/>
+    <wire from="(280,370)" to="(330,370)"/>
+    <wire from="(60,310)" to="(60,380)"/>
+    <wire from="(60,450)" to="(260,450)"/>
+    <wire from="(280,410)" to="(330,410)"/>
+    <wire from="(280,420)" to="(330,420)"/>
+    <wire from="(280,430)" to="(330,430)"/>
+    <wire from="(280,440)" to="(330,440)"/>
+    <wire from="(60,380)" to="(60,450)"/>
+    <wire from="(60,520)" to="(260,520)"/>
+    <wire from="(280,480)" to="(330,480)"/>
+    <wire from="(280,490)" to="(330,490)"/>
+    <wire from="(280,500)" to="(330,500)"/>
+    <wire from="(280,510)" to="(330,510)"/>
+    <wire from="(60,520)" to="(60,540)"/>
+    <wire from="(60,450)" to="(60,520)"/>
+    <wire from="(340,40)" to="(340,50)"/>
+    <wire from="(340,40)" to="(420,40)"/>
+    <wire from="(340,470)" to="(420,470)"/>
+    <wire from="(340,400)" to="(420,400)"/>
+    <wire from="(340,330)" to="(420,330)"/>
+    <wire from="(340,260)" to="(420,260)"/>
+    <wire from="(340,190)" to="(420,190)"/>
+    <wire from="(280,150)" to="(330,150)"/>
+    <wire from="(280,160)" to="(330,160)"/>
+    <wire from="(280,140)" to="(330,140)"/>
+    <wire from="(280,130)" to="(330,130)"/>
+    <wire from="(340,120)" to="(420,120)"/>
+    <comp lib="0" loc="(420,330)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="e"/>
+    </comp>
+    <comp loc="(340,400)" name="led f">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(420,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="d"/>
+    </comp>
+    <comp lib="0" loc="(260,170)" name="Splitter"/>
+    <comp loc="(340,120)" name="led b">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(260,310)" name="Splitter"/>
+    <comp lib="0" loc="(420,470)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="g"/>
+    </comp>
+    <comp lib="0" loc="(260,240)" name="Splitter"/>
+    <comp lib="0" loc="(260,380)" name="Splitter"/>
+    <comp lib="0" loc="(420,120)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp loc="(340,190)" name="led c">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(340,470)" name="led g">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(420,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="f"/>
+    </comp>
+    <comp loc="(340,330)" name="led e">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(420,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="c"/>
+    </comp>
+    <comp loc="(340,50)" name="led a">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(340,260)" name="led d">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(260,450)" name="Splitter"/>
+    <comp lib="0" loc="(260,100)" name="Splitter"/>
+    <comp lib="0" loc="(60,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(260,520)" name="Splitter"/>
+    <comp lib="0" loc="(420,40)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="a"/>
+    </comp>
   </circuit>
   <circuit name="led a">
     <a name="circuit" val="led a"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="a"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -124,17 +259,54 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(390,240)" to="(390,330)"/>
     <wire from="(390,240)" to="(420,240)"/>
     <wire from="(490,210)" to="(570,210)"/>
+    <comp lib="0" loc="(120,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S1"/>
+    </comp>
+    <comp lib="1" loc="(250,290)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+    </comp>
     <comp lib="0" loc="(570,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,170)" name="AND Gate">
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,130)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(490,210)" name="OR Gate">
+      <a name="size" val="70"/>
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="0" loc="(40,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S3"/>
+    </comp>
+    <comp lib="1" loc="(250,90)" name="AND Gate">
+      <a name="negate1" val="true"/>
     </comp>
     <comp lib="0" loc="(80,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S2"/>
     </comp>
-    <comp lib="1" loc="(250,90)" name="AND Gate">
+    <comp lib="0" loc="(160,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S0"/>
+    </comp>
+    <comp lib="1" loc="(250,210)" name="AND Gate">
+      <a name="inputs" val="3"/>
       <a name="negate1" val="true"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,330)" name="AND Gate">
+      <a name="inputs" val="3"/>
     </comp>
     <comp lib="1" loc="(250,250)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -142,47 +314,10 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="negate1" val="true"/>
       <a name="negate2" val="true"/>
     </comp>
-    <comp lib="0" loc="(160,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S0"/>
-    </comp>
-    <comp lib="0" loc="(120,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S1"/>
-    </comp>
-    <comp lib="1" loc="(490,210)" name="OR Gate">
-      <a name="size" val="70"/>
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="1" loc="(250,130)" name="AND Gate">
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="1" loc="(250,210)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="0" loc="(40,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S3"/>
-    </comp>
-    <comp lib="1" loc="(250,170)" name="AND Gate">
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="1" loc="(250,290)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="1" loc="(250,330)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
   </circuit>
   <circuit name="led b">
     <a name="circuit" val="led b"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="b"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -239,44 +374,30 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(330,210)" to="(330,280)"/>
     <wire from="(330,210)" to="(350,210)"/>
     <wire from="(420,180)" to="(500,180)"/>
-    <comp lib="0" loc="(40,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S3"/>
-    </comp>
-    <comp lib="0" loc="(500,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="1" loc="(270,280)" name="AND Gate">
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="1" loc="(270,200)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="1" loc="(270,240)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-    </comp>
     <comp lib="0" loc="(80,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S2"/>
     </comp>
-    <comp lib="1" loc="(420,180)" name="OR Gate">
-      <a name="size" val="70"/>
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="1" loc="(270,120)" name="AND Gate">
+    <comp lib="1" loc="(270,240)" name="AND Gate">
+      <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
     </comp>
     <comp lib="0" loc="(160,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S0"/>
+    </comp>
+    <comp lib="1" loc="(270,160)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="0" loc="(40,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S3"/>
     </comp>
     <comp lib="0" loc="(120,50)" name="Pin">
       <a name="facing" val="south"/>
@@ -287,16 +408,30 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="negate0" val="true"/>
       <a name="negate1" val="true"/>
     </comp>
-    <comp lib="1" loc="(270,160)" name="AND Gate">
-      <a name="inputs" val="3"/>
+    <comp lib="0" loc="(500,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(270,120)" name="AND Gate">
       <a name="negate0" val="true"/>
       <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="1" loc="(270,280)" name="AND Gate">
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="1" loc="(420,180)" name="OR Gate">
+      <a name="size" val="70"/>
+      <a name="inputs" val="6"/>
+    </comp>
+    <comp lib="1" loc="(270,200)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate1" val="true"/>
     </comp>
   </circuit>
   <circuit name="led c">
     <a name="circuit" val="led c"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="c"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -342,21 +477,13 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(340,180)" to="(340,240)"/>
     <wire from="(340,180)" to="(360,180)"/>
     <wire from="(410,160)" to="(490,160)"/>
-    <comp lib="1" loc="(230,240)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="1" loc="(410,160)" name="OR Gate">
-      <a name="size" val="50"/>
-      <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="1" loc="(230,160)" name="AND Gate">
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="0" loc="(160,50)" name="Pin">
+    <comp lib="0" loc="(40,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="S0"/>
+      <a name="label" val="S3"/>
+    </comp>
+    <comp lib="1" loc="(230,80)" name="AND Gate">
+      <a name="negate1" val="true"/>
     </comp>
     <comp lib="1" loc="(230,200)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -364,10 +491,13 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="negate1" val="true"/>
       <a name="negate2" val="true"/>
     </comp>
-    <comp lib="0" loc="(80,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S2"/>
+    <comp lib="0" loc="(490,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(410,160)" name="OR Gate">
+      <a name="size" val="50"/>
+      <a name="inputs" val="5"/>
     </comp>
     <comp lib="0" loc="(120,50)" name="Pin">
       <a name="facing" val="south"/>
@@ -377,22 +507,27 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <comp lib="1" loc="(230,120)" name="AND Gate">
       <a name="negate0" val="true"/>
     </comp>
-    <comp lib="0" loc="(40,50)" name="Pin">
+    <comp lib="1" loc="(230,160)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(230,240)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="0" loc="(160,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="S3"/>
+      <a name="label" val="S0"/>
     </comp>
-    <comp lib="1" loc="(230,80)" name="AND Gate">
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="0" loc="(490,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(80,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S2"/>
     </comp>
   </circuit>
   <circuit name="led d">
     <a name="circuit" val="led d"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="d"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -445,9 +580,33 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(240,240)" to="(250,240)"/>
     <wire from="(250,240)" to="(380,240)"/>
     <wire from="(440,160)" to="(500,160)"/>
+    <comp lib="0" loc="(120,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S1"/>
+    </comp>
+    <comp lib="1" loc="(250,120)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,160)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="1" loc="(440,160)" name="OR Gate">
+      <a name="size" val="50"/>
+      <a name="inputs" val="5"/>
+    </comp>
     <comp lib="0" loc="(500,160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,240)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+      <a name="negate2" val="true"/>
     </comp>
     <comp lib="0" loc="(40,50)" name="Pin">
       <a name="facing" val="south"/>
@@ -458,48 +617,24 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
     </comp>
-    <comp lib="1" loc="(250,240)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="1" loc="(250,200)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="1" loc="(250,160)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="0" loc="(120,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S1"/>
-    </comp>
     <comp lib="0" loc="(80,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S2"/>
+    </comp>
+    <comp lib="1" loc="(250,200)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate2" val="true"/>
     </comp>
     <comp lib="0" loc="(160,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S0"/>
     </comp>
-    <comp lib="1" loc="(440,160)" name="OR Gate">
-      <a name="size" val="50"/>
-      <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="1" loc="(250,120)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate2" val="true"/>
-    </comp>
   </circuit>
   <circuit name="led e">
     <a name="circuit" val="led e"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="e"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -540,28 +675,31 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(120,120)" to="(120,180)"/>
     <wire from="(80,90)" to="(210,90)"/>
     <wire from="(160,190)" to="(200,190)"/>
-    <comp lib="0" loc="(80,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S2"/>
-    </comp>
-    <comp lib="1" loc="(240,80)" name="AND Gate"/>
     <comp lib="1" loc="(240,180)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
       <a name="negate1" val="true"/>
       <a name="negate2" val="true"/>
     </comp>
+    <comp lib="1" loc="(240,130)" name="AND Gate">
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S2"/>
+    </comp>
     <comp lib="1" loc="(390,160)" name="OR Gate">
       <a name="size" val="50"/>
       <a name="inputs" val="4"/>
     </comp>
+    <comp lib="0" loc="(40,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S3"/>
+    </comp>
     <comp lib="1" loc="(240,230)" name="AND Gate">
       <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(450,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(120,50)" name="Pin">
       <a name="facing" val="south"/>
@@ -573,18 +711,15 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="tristate" val="false"/>
       <a name="label" val="S0"/>
     </comp>
-    <comp lib="0" loc="(40,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S3"/>
+    <comp lib="0" loc="(450,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(240,130)" name="AND Gate">
-      <a name="negate1" val="true"/>
-    </comp>
+    <comp lib="1" loc="(240,80)" name="AND Gate"/>
   </circuit>
   <circuit name="led f">
     <a name="circuit" val="led f"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="f"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -632,57 +767,57 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(360,180)" to="(360,240)"/>
     <wire from="(240,240)" to="(360,240)"/>
     <wire from="(440,160)" to="(520,160)"/>
-    <comp lib="1" loc="(240,160)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="0" loc="(80,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S2"/>
-    </comp>
-    <comp lib="1" loc="(240,200)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(40,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S3"/>
-    </comp>
-    <comp lib="0" loc="(160,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S0"/>
-    </comp>
     <comp lib="0" loc="(120,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S1"/>
-    </comp>
-    <comp lib="1" loc="(240,120)" name="AND Gate">
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="0" loc="(520,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="1" loc="(440,160)" name="OR Gate">
-      <a name="size" val="70"/>
-      <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="1" loc="(240,80)" name="AND Gate">
-      <a name="negate1" val="true"/>
     </comp>
     <comp lib="1" loc="(240,240)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
       <a name="negate2" val="true"/>
     </comp>
+    <comp lib="0" loc="(160,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S0"/>
+    </comp>
+    <comp lib="1" loc="(240,80)" name="AND Gate">
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="1" loc="(240,200)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(240,120)" name="AND Gate">
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S2"/>
+    </comp>
+    <comp lib="0" loc="(520,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(40,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S3"/>
+    </comp>
+    <comp lib="1" loc="(440,160)" name="OR Gate">
+      <a name="size" val="70"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(240,160)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate2" val="true"/>
+    </comp>
   </circuit>
   <circuit name="led g">
     <a name="circuit" val="led g"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="g"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -730,37 +865,29 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(340,180)" to="(340,240)"/>
     <wire from="(230,240)" to="(340,240)"/>
     <wire from="(410,160)" to="(500,160)"/>
-    <comp lib="1" loc="(230,200)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(160,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S0"/>
-    </comp>
-    <comp lib="0" loc="(500,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="0" loc="(120,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="S1"/>
     </comp>
-    <comp lib="1" loc="(410,160)" name="OR Gate">
-      <a name="size" val="50"/>
-      <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="0" loc="(80,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="S2"/>
-    </comp>
     <comp lib="1" loc="(230,120)" name="AND Gate">
       <a name="negate1" val="true"/>
     </comp>
-    <comp lib="1" loc="(230,80)" name="AND Gate">
-      <a name="negate1" val="true"/>
+    <comp lib="1" loc="(230,160)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="1" loc="(230,200)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(500,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(410,160)" name="OR Gate">
+      <a name="size" val="50"/>
+      <a name="inputs" val="5"/>
     </comp>
     <comp lib="1" loc="(230,240)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -771,10 +898,56 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="tristate" val="false"/>
       <a name="label" val="S3"/>
     </comp>
-    <comp lib="1" loc="(230,160)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate2" val="true"/>
+    <comp lib="1" loc="(230,80)" name="AND Gate">
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(160,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S0"/>
+    </comp>
+    <comp lib="0" loc="(80,50)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="S2"/>
+    </comp>
+  </circuit>
+  <circuit name="leds">
+    <a name="circuit" val="leds"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(150,220)" to="(150,240)"/>
+    <wire from="(250,240)" to="(250,290)"/>
+    <wire from="(170,290)" to="(250,290)"/>
+    <wire from="(170,300)" to="(230,300)"/>
+    <wire from="(230,160)" to="(230,300)"/>
+    <wire from="(230,160)" to="(260,160)"/>
+    <wire from="(260,160)" to="(260,180)"/>
+    <wire from="(170,310)" to="(210,310)"/>
+    <wire from="(210,170)" to="(210,310)"/>
+    <wire from="(250,170)" to="(250,180)"/>
+    <wire from="(210,170)" to="(250,170)"/>
+    <wire from="(170,280)" to="(260,280)"/>
+    <wire from="(260,240)" to="(260,280)"/>
+    <wire from="(270,240)" to="(270,270)"/>
+    <wire from="(170,270)" to="(270,270)"/>
+    <wire from="(170,260)" to="(200,260)"/>
+    <wire from="(200,140)" to="(200,260)"/>
+    <wire from="(200,140)" to="(280,140)"/>
+    <wire from="(280,140)" to="(280,180)"/>
+    <wire from="(190,150)" to="(190,250)"/>
+    <wire from="(170,250)" to="(190,250)"/>
+    <wire from="(190,150)" to="(270,150)"/>
+    <wire from="(270,150)" to="(270,180)"/>
+    <comp lib="3" loc="(520,180)" name="DisplayDecoder"/>
+    <comp loc="(170,250)" name="main"/>
+    <comp lib="6" loc="(250,180)" name="7-Segment Display"/>
+    <comp lib="0" loc="(150,220)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
